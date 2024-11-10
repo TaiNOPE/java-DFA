@@ -1,0 +1,6 @@
+a;b
+q0;q1;q2;qf
+q0
+qf
+q1;qf;q1;qf
+q2;q2;qf;qf
