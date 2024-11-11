@@ -61,7 +61,12 @@ public class DFA {
             char word = input.charAt(i);
             int alph = this.alphabet.get(String.valueOf(word));
             int stat = this.states.get(currentState);
-            currentState = this.moveset[alph][stat];
+            String nextMove = this.moveset[alph][stat];
+            
+            if(nextMove.equals("null")){
+                return false;
+            }
+            currentState = nextMove;
             System.out.println("Input: " + word + ", going to " + currentState);
         }
         

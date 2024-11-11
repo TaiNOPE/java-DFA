@@ -8,7 +8,7 @@ import java.io.FileReader;
 public class LFA_AFD {
     public static void main(String[] args) {
         automataExample("abba");
-        externalFileExample("abba");
+        externalFileExample("cabbbabcccbc");
     }
 
 
@@ -33,9 +33,6 @@ public class LFA_AFD {
                 moveset[letterId] = reader.readLine().split(";");
             }
             
-            for(String s: states){
-                System.out.println(s);;
-            }
             // Fecha o arquivo
             fr.close();
             reader.close();
@@ -58,7 +55,7 @@ public class LFA_AFD {
     Exemplo usando um automato salvo em um arquivo externo
     */
     public static void externalFileExample(String word){
-        DFA automata = loadFromFile("automata1.txt");
+        DFA automata = loadFromFile("entrega.txt");
         
         if(automata.testInput(word)){
             System.out.println("A palavra " + word + " foi ACEITA");
